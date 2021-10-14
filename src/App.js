@@ -12,6 +12,7 @@ function App() {
     try {
       const response = await axios.get("https://disease.sh/v3/covid-19/historical/all?lastDays=all");
       const { data } = response
+      console.log(data)
       setCovidData(data)
     } catch (e) {
       console.log(e)
